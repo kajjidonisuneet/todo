@@ -1,0 +1,23 @@
+
+body{
+    background-color: gray;
+}
+.check-background{
+    background-color: red;
+}
+
+.cross-mark-button{
+    width: 30px;
+    height: 30px;
+    background-image: url('images/icon-cross.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.task-text-checked {
+    text-decoration: line-through;
+}
+
+/* .task-text-unchecked {
+    text-decoration: none;
+} */
