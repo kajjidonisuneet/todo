@@ -14,42 +14,62 @@
     <link rel="stylesheet" href="styles.css" />
     <title>Frontend Mentor | Todo app</title>
 
-    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-    <style>
-      .attribution {
-        font-size: 11px;
-        text-align: center;
-      }
-      .attribution a {
-        color: hsl(228, 45%, 44%);
-      }
-    </style>
   </head>
   <body>
     <div class="main-box-background">
       <div class="content-box">
         <div class="title-box">
           <h2 class="todo-title">TODO</h2>
-          <div class="light-dark-toggle-div"></div>
         </div>
 
         <div class="input-box">
-          <!--button class="input-text-button"></button-->
-          <input
-          type="text"
-          id="todo-title-input"
-          placeholder="Create a new todo"
-        />
+          <div class="blank-check-box">
+            <input class="task-checkbox add-your-css-class-here" type="checkbox" disabled>
+            <input
+              type="text"
+              id="todo-title-input"
+              placeholder="Create a new todo..."
+            />
         </div>
+        <div class="task-box">
+          <div class="task-display-box"></div>
+          <div class="task-display-last-box">
+            <p class="items-left-text"></p>
+            <button class="clear-completed-button"> Clear completed </button>
+            
+            <!-- <div class="display-filter-box-desktop">
+              <div>
+                <input type="radio" id="filter-all" name="display-filter" checked/>
+                <label for="filter-all">All</label>
+              </div>
+              <div>
+                <input type="radio" id="filter-active" name="display-filter" checked/>
+                <label for="filter-active">Active</label>
+              </div>
+              <div>
+                <input type="radio" id="filter-completed" name="display-filter" checked/>
+                <label for="filter-completed">Completed</label>
+              </div>
+            </div> -->
 
-        <div class="task-display-box">
-
+          </div>
         </div>
-
         <div class="footer">
-          <button class="clear-all-button"> Clear ALL </button>
-          <button class="clear-completed-button"> Clear completed </button>
-        items left All Active Completed 
+          
+          <div class="display-filter-box-mobile">
+            <div>
+              <input type="radio" id="filter-all" name="display-filter" checked/>
+              <label for="filter-all">All</label>
+            </div>
+            <div>
+              <input type="radio" id="filter-active" name="display-filter" checked/>
+              <label for="filter-active">Active</label>
+            </div>
+            <div>
+              <input type="radio" id="filter-completed" name="display-filter" checked/>
+              <label for="filter-completed">Completed</label>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -60,7 +80,7 @@
       Challenge by
       <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
         >Frontend Mentor</a
-      >. Coded by <a href="#">Your Name Here</a>.
+      >. Coded by <a href="#">Suneet Kajjidoni</a>.
     </div>
     <script src="app.js"></script>
   </body>

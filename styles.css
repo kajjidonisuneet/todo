@@ -1,10 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
 
-body{
-    background-color: gray;
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
 }
-.check-background{
-    background-color: red;
+
+:root {
+    --BrightBlue: hsl(220, 98%, 61%);
+    
+    --VeryDarkBlue: hsl(235, 21%, 11%);
+    --VeryDarkDesaturatedBlue: hsl(235, 24%, 19%);
+    --LightGrayishBlue: hsl(234, 39%, 85%);
+    --LightGrayishBlueHover: hsl(236, 33%, 92%);
+    --DarkGrayishBlue: hsl(234, 11%, 52%);
+    --VeryDarkGrayishBlueHover: hsl(233, 14%, 35%);
+    --VeryDarkGrayishBlue: hsl(237, 14%, 26%);
+    }
+
+html {
+    font-size: 18px;
 }
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    background-color: var(--VeryDarkBlue);
+}
+
+.main-box-background {
+    background-image: url('images/bg-mobile-dark.jpg');
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.content-box {
+    padding: 50px 30px 50px 30px;
+}
+
+.todo-title {
+    color: white;
+    margin-bottom: 20px;
+    font-weight: 600;
+    letter-spacing: 7px;
+}
+
+.blank-check-box {
+    background-color: var(--VeryDarkDesaturatedBlue);
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px var(--VeryDarkGrayishBlue);
+    margin-bottom: 20px;
+    display: flex;
+}
+
+.task-box, .display-filter-box-mobile{
+    background-color: var(--VeryDarkDesaturatedBlue);
+    border-radius: 5px;
+    box-shadow: 0 0 3px var(--VeryDarkGrayishBlue);
+}
+
+input[type="checkbox"]{
+
+    margin-right: 20px;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    box-sizing: border-box;
+    border: 1px solid var(--VeryDarkGrayishBlue);
+    border-radius: 50%;
+    display: grid;
+    place-content: center;
+}
+
+input[type="checkbox"]:checked::before {
+    content: "";
+    width: 25px;
+    height: 25px;
+    box-sizing: border-box;
+    border-radius: 50%;
+    background-image: url('images/icon-check.svg'), linear-gradient(120deg, hsl(192, 100%, 67%),hsl(280, 87%, 65%));
+    background-position: center, center;
+    background-repeat: no-repeat;
+    background-size: 65%, contain;
+}
+
+/* 
+input[type="checkbox"]:hover {
+    content: "";
+    width: 25px;
+    height: 25px;
+    box-sizing: border-box;
+    border-image: linear-gradient(120deg, hsl(192, 100%, 67%),hsl(280, 87%, 65%));
+    border-image-width: 2px;
+} */
+
+.task-item-box{
+    display: flex;
+    padding: 15px;
+    flex-direction: row;
+    align-items: center;
+}
+
+input[type=text] {
+    width: 80%;
+    border: none;
+    background-color: transparent;
+    color: var(--LightGrayishBlue);
+    font-size: 18px;
+  }
 
 .cross-mark-button{
     width: 30px;
@@ -12,12 +115,87 @@ body{
     background-image: url('images/icon-cross.svg');
     background-repeat: no-repeat;
     background-position: center;
+    margin-left: auto;
+    border: none;
+    background-color: transparent;
+}
+
+.task-text-unchecked{
+    color: var(--LightGrayishBlue);
 }
 
 .task-text-checked {
     text-decoration: line-through;
+    color: var(--DarkGrayishBlue);
 }
 
-/* .task-text-unchecked {
-    text-decoration: none;
+.task-text-unchecked:hover, .task-text-checked:hover{
+    cursor: pointer;
+}
+
+hr{
+    border: 1px solid var(--VeryDarkGrayishBlue);
+}
+
+.task-display-last-box{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+
+.items-left-text{
+    color: var(--DarkGrayishBlue);
+    font-size: 15px;
+    font-weight: 600;
+}
+
+.clear-completed-button{
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+    color: var(--DarkGrayishBlue);
+    font-weight: 600;
+}
+
+.clear-completed-button:hover{
+    color: var(--LightGrayishBlueHover);
+    cursor: pointer;
+}
+
+.display-filter-box-mobile{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.display-filter-box-mobile label{
+    color: var(--DarkGrayishBlue);
+    padding: 3px;
+}
+
+input[type=radio]{
+    appearance: none;
+}
+
+input[type=radio]:checked + label{
+    color: var(--BrightBlue);
+}
+
+/* .display-filter-box-desktop{
+    display: none;
 } */
+
+
+
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: var(--DarkGrayishBlue);
+  }
+.attribution a {
+    color: hsl(228, 45%, 44%);
+  }
+
