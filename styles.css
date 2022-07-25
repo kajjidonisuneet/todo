@@ -53,7 +53,7 @@ body {
     display: flex;
 }
 
-.task-box, .display-filter-box-mobile{
+.task-box, .display-filter-box{
     background-color: var(--VeryDarkDesaturatedBlue);
     border-radius: 5px;
     box-shadow: 0 0 3px var(--VeryDarkGrayishBlue);
@@ -141,6 +141,8 @@ hr{
     display: flex;
     justify-content: space-between;
     padding: 15px;
+    width: 100%;
+    position: relative;
 }
 
 .items-left-text{
@@ -162,16 +164,17 @@ hr{
     cursor: pointer;
 }
 
-.display-filter-box-mobile{
-    margin-top: 30px;
-    margin-bottom: 30px;
+.display-filter-box{
     padding: 15px;
-    display: flex;
+    position: absolute;
     justify-content: center;
-
+    display: flex;
+    margin-top: 55px;
+    margin-left: -15px;
+    width:100%
 }
 
-.display-filter-box-mobile label{
+.display-filter-box label{
     color: var(--DarkGrayishBlue);
     padding: 3px;
 }
@@ -183,12 +186,6 @@ input[type=radio]{
 input[type=radio]:checked + label{
     color: var(--BrightBlue);
 }
-
-/* .display-filter-box-desktop{
-    display: none;
-} */
-
-
 
 .attribution {
     font-size: 11px;

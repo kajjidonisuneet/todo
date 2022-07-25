@@ -2,7 +2,7 @@ const inputBox = document.querySelector("#todo-title-input");
 const taskDisplayBox = document.querySelector(".task-display-box");
 const clearCompletedButton = document.querySelector(".clear-completed-button");
 const itemsLeftBox = document.querySelector('.items-left-text');
-const displayFilterSelectionMobileDiv = document.querySelector('.display-filter-box-mobile');
+const displayFilterSelectionMobileDiv = document.querySelector('.display-filter-box');
 let displayFilter='all'
 
 
