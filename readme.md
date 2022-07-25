@@ -7,11 +7,11 @@ Deployed link - <a href='https://willowy-malabi-f7cb6f.netlify.app'> click here<
 This page has a mobile and desktop responsive design (set at 450px) and built as per below design.
 
 Desktop Design.<br>
-![](images/bg-desktop-dark.jpg)
+![](images/desktop-design-dark.jpg)
 
 
 Mobile Design.<br>
-![](images/bg-mobile-dark.jpg)
+![](images/mobile-design-dark.jpg)
 
 
 ## Acknowledgments
