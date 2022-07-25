@@ -60,7 +60,6 @@ body {
 }
 
 input[type="checkbox"]{
-
     margin-right: 20px;
     appearance: none;
     width: 25px;
@@ -84,15 +83,15 @@ input[type="checkbox"]:checked::before {
     background-size: 65%, contain;
 }
 
-/* 
+
 input[type="checkbox"]:hover {
     content: "";
     width: 25px;
     height: 25px;
     box-sizing: border-box;
-    border-image: linear-gradient(120deg, hsl(192, 100%, 67%),hsl(280, 87%, 65%));
-    border-image-width: 2px;
-} */
+    border-color:var(--BrightBlue);
+    cursor: pointer;
+}
 
 .task-item-box{
     display: flex;
@@ -118,6 +117,9 @@ input[type=text] {
     margin-left: auto;
     border: none;
     background-color: transparent;
+}
+.cross-mark-button:hover{
+    cursor: pointer;
 }
 
 .task-text-unchecked{
@@ -186,6 +188,77 @@ input[type=radio]{
 input[type=radio]:checked + label{
     color: var(--BrightBlue);
 }
+
+.no-items-left{
+    color: var(--LightGrayishBlue);
+    text-align: center;
+}
+
+.task-no-item-box{
+    padding: 15px;
+}
+
+
+
+/* desktop style */
+@media (min-width: 451px) {
+    .main-box-background {
+        background-image: url('images/bg-desktop-dark.jpg');
+        
+    }
+
+    .content-box {
+        padding: 100px 350px 500px 350px;
+    }
+
+    .todo-title {
+        margin-bottom: 50px;
+        font-weight: 600;
+        font-size: 55px;
+        letter-spacing: 15px;
+    }
+
+    .blank-check-box {
+        padding: 25px;
+        border-radius: 10px;
+        margin-bottom: 30px;
+    }
+
+    .task-box, .display-filter-box{
+        border-radius: 10px;
+    }
+
+    .task-item-box{
+        padding: 20px;
+    }
+
+
+
+
+
+
+    .task-display-last-box{
+        position: static;
+        padding: 20px;
+    }
+
+    .display-filter-box{
+        padding: 0;
+        position: static;
+        justify-content: center;
+        display: flex;
+        margin-top: 0;
+        margin-left: 0;
+        width: auto;
+        border-radius: 0;
+        box-shadow: none;
+    }
+}
+
+
+
+
+
 
 .attribution {
     font-size: 11px;

@@ -14,7 +14,7 @@ function createDisplayElement(id, taskStatus, taskText){
 
     //to create a checkbox input
     const taskInput = document.createElement('input')
-    taskInput.className = 'task-checkbox add-your-css-class-here'
+    taskInput.className = 'task-checkbox'
     taskInput.type = 'checkbox'
     taskInput.dataset.inputId = id
     if (taskStatus === 'checked'){
@@ -53,10 +53,10 @@ function displayTask (displayFilter) {
     if (localStorage.length === 0){
         const text = document.createTextNode('No todo items left!')
         const par = document.createElement('p')
-        par.className = 'no-items-left-box'
+        par.className = 'no-items-left'
         par.appendChild(text)
         const div = document.createElement('div')
-        div.className = 'task-item-box-no-item'
+        div.className = 'task-no-item-box'
         div.appendChild(par)
         taskDisplayBox.appendChild(div)
     }
