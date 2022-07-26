@@ -1,6 +1,6 @@
 ## TODO
 
-Social Proof is a static web page that utilizes local storage and built to demonstrate working with DOM.
+TODO is a static web page that utilizes local storage and built to demonstrate working with DOM.
 
 Deployed link - <a href='https://willowy-malabi-f7cb6f.netlify.app'> click here</a>.
 
